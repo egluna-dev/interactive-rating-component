@@ -9,28 +9,46 @@
     <title>Order Summary Component | Frontend Mentor</title>
 </head>
 <body>
-    <main class="container flex-column centered">
+    <main class="container flex-column-centered">
         <section class="card" id="rating-card">
-            <div class="card-content">
-                <div class="star-icon">
-                    <img src="./public/imgs/icon-star.svg" alt="Star Icon">
-                </div>
-                <div class="rating-card-text">
-                    <h2>How did we do?</h2>
-                    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-                </div>
-                <form onsubmit="handleSubmit">
-                    <div class="rating-btns">
-                        <ul>
-                            <li><input type="radio" name="rating" value="1">1</li>
-                            <li><input type="radio" name="rating" value="2">2</li>
-                            <li><input type="radio" name="rating" value="3">3</li>
-                            <li><input type="radio" name="rating" value="4">4</li>
-                            <li><input type="radio" name="rating" value="5">5</li>
-                        </ul>
-                    </div>
-                </form>
+            <div class="star-icon">
+                <img src="./public/imgs/icon-star.svg" alt="Star Icon">
             </div>
+            <div class="rating-card-text">
+                <h1>How did we do?</h1>
+                <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            </div>
+            <div id="ratings-bar" class="rb">
+                <div class="rb-tab rb-tab-active" data-value="1">
+                    <div class="rb-spot">
+                        <span class="rb-txt">1</span>
+                    </div>
+                </div>
+                <div class="rb-tab" data-value="2">
+                    <div class="rb-spot">
+                        <span class="rb-txt">2</span>
+                    </div>
+                </div>
+                <div class="rb-tab" data-value="3">
+                    <div class="rb-spot">
+                        <span class="rb-txt">3</span>
+                    </div>
+                </div>
+                <div class="rb-tab" data-value="4">
+                    <div class="rb-spot">
+                        <span class="rb-txt">4</span>
+                    </div>
+                </div>
+                <div class="rb-tab" data-value="5">
+                    <div class="rb-spot">
+                        <span class="rb-txt">5</span>
+                    </div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </section>
+        <section class="card hidden" id="form-response-card">
+            <img src="./public/imgs/illustration-thank-you.svg" alt="Thank you!">
         </section>
     </main>
     <script src="app.js"></script>
