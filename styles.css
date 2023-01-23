@@ -19,6 +19,9 @@
     /* Font weights */
     --fw-regular: 400;
     --fw-bold: 700;
+
+    /* Transition effect and duration */
+    --transition: all 200ms ease-in-out;
 }
 
 html {
@@ -46,7 +49,7 @@ body {
 }
 
 .card {
-    background: radial-gradient(400px 400px at top, var(--dark-blue), var(--very-dark-blue));
+    background: radial-gradient(450px 450px at top, var(--dark-blue), var(--very-dark-blue));
     display: flex;
     flex-direction: column;
     align-items: space-evenly;
@@ -54,7 +57,7 @@ body {
     width: 90%;
     max-width: 400px;
     height: auto;
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 7%;
 }
 
@@ -64,12 +67,14 @@ body {
 
 .rating-card-text > h1 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    font-weight: var(--fw-bold);
 }
 
 .rating-card-text > p {
     width: 100%;
-    color: var(--light-grey)
+    color: var(--light-grey);
+    line-height: 1.6;
 }
 
 .star-icon {
@@ -84,7 +89,7 @@ body {
 }
 
 .star-icon img {
-    width: 0.75rem;
+    width: 1rem;
 }
 
 .rb {
@@ -100,10 +105,27 @@ body {
     display: inline-block;
     background-color: var(--dark-blue);
     position: relative;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.rb-tab:hover {
+    background-color: var(--medium-grey);
+}
+
+.rb-tab:hover .rb-txt {
+    color: var(--neutral-white);
+}
+
+.rb-tab:active {
+    background-color: var(--primary);
+}
+
+.rb-tab:active .rb-txt {
+    color: var(--neutral-white);
 }
 
 .rb-txt {
@@ -112,6 +134,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--medium-grey)
+}
+
+.form-rating-section {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    height: 2.5rem;
+    margin: 1rem 0;
+    width: 70%;
+    border-radius: 15px;
+}
+
+p.form-rating-txt {
+    color: var(--primary);
+    font-size: 2vh;
+    margin: 0 auto;
+    width: auto;
 }
 
 #rating-card button {
@@ -126,6 +166,37 @@ body {
     cursor: pointer;
 }
 
+#rating-card button:active {
+    background-color: var(--neutral-white);
+    color: var(--primary);
+}
+
+#form-response-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+    height: 20%;
+}
+
+#form-response-card-content h1 {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+}
+
+#form-response-card-content p {
+    color: var(--light-grey);
+    line-height: 1.6;
+}
+
 .hidden {
     display: none;
+}
+
+@media only screen and (min-width: 425px) {
+    .rb-tab {
+        width: 3rem;
+        height: 3rem;
+    }
 }
