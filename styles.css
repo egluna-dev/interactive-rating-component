@@ -112,6 +112,14 @@ body {
     transition: var(--transition);
 }
 
+.rb-tab-active {
+    background-color: var(--primary);
+}
+
+.rb-tab-active .rb-txt {
+    color: var(--neutral-white);
+}
+
 .rb-tab:hover {
     background-color: var(--medium-grey);
 }
@@ -154,7 +162,7 @@ p.form-rating-txt {
     width: auto;
 }
 
-#rating-card button {
+#rating-card input[type="button"] {
     background-color: var(--primary);
     height: 3rem;
     border: none;
@@ -166,7 +174,7 @@ p.form-rating-txt {
     cursor: pointer;
 }
 
-#rating-card button:active {
+#rating-card input[type="button"]:active {
     background-color: var(--neutral-white);
     color: var(--primary);
 }
