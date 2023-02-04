@@ -31,7 +31,7 @@ html {
 body {
     font-family: 'Overpass', sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .rb-tab-active {
-    background-color: var(--primary);
+    background-color: var(--medium-grey);
 }
 
 .rb-tab-active .rb-txt {
@@ -121,7 +121,7 @@ body {
 }
 
 .rb-tab:hover {
-    background-color: var(--medium-grey);
+    background-color: var(--primary);
 }
 
 .rb-tab:hover .rb-txt {
@@ -129,7 +129,7 @@ body {
 }
 
 .rb-tab:active {
-    background-color: var(--primary);
+    background-color: var(--medium-grey);
 }
 
 .rb-tab:active .rb-txt {
@@ -200,6 +200,21 @@ p.form-rating-txt {
 
 .hidden {
     display: none;
+}
+
+.attribution {
+    color: var(--medium-grey);
+    font-size: 0.75rem;
+    margin: 1rem;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--light-grey);
+}
+
+.attribution a:visited {
+    color: #00aafe
 }
 
 @media only screen and (min-width: 425px) {

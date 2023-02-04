@@ -14,13 +14,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const userRating_dom = document.getElementById("user-rating");
 
-    const handleSubmit = (e) => {
-        ratingCardDiv.classList.add("hidden");
-        formResponseCard.classList.remove("hidden");
-
-        console.log("Form submitted")
+    const setFormListener = () => {
+        ratingButtonsArr.forEach(input => {
+            input.addEventListener('change', () => {
+                console.log(input)
+                const ratingValue = input.getAttribute("data-value");
+                console.log(ratingValue);
+                input.classList.add("rb-tab-active")
+                formSubmitButton.disabled = false;
+            });
+        });
     }
 
-    console.log(ratingButtonsArr);
+    const handleSubmit = () => {
+        ratingCardDiv.classList.add("hidden");
+        formResponseCard.classList.remove("hidden");
+    }
+
     formSubmitButton.addEventListener("click", handleSubmit);
+
+    const main = () => {
+        setFormListener();
+        console.log("Main function is running")
+    }
+    
+    main();
 });
+
+
